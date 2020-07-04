@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,6 +13,7 @@ using WebApplication5.Models;
 
 namespace WebApplication5.Controllers
 {
+    [Authorize]
     [EnableCors("AllowOriginRule")]
     [Route("api/[controller]")]
     [ApiController]

@@ -7,17 +7,20 @@ import {RouterModule} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MasterComponent } from "./PatientApp.MasterComponent";
+import { LoginComponent } from "./PatientApp.LoginComponent";
 import {PatientHomeRoutes} from './PatientApp.PatientHomeRouting';
+import {User} from "./PatientApp.LoginModel";
+import {SecurityLogic} from "../Utilities/Utility.AuthGuard";
 
 @NgModule({
   declarations: [
-  HomeComponent,MasterComponent,HomeComponent,MasterComponent
+  HomeComponent,MasterComponent,HomeComponent,MasterComponent,LoginComponent
   ],
   imports: [
     BrowserModule,CommonModule,FormsModule,HttpClientModule,
     ReactiveFormsModule,RouterModule.forRoot(PatientHomeRoutes)
   ],
-  providers: [],
+  providers: [User,SecurityLogic],
   bootstrap: [MasterComponent]
 })
 export class PatientHomeModule { }

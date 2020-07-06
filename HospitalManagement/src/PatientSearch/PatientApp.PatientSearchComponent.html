@@ -1,4 +1,4 @@
-Enter Patient Name:<input type="text" [(ngModel)]="PatientName" name="" ID=""/><br>
+Enter Patient Name:<input type="text" [(ngModel)]="patientName" name="" ID=""/><br>
 
           <input type="button" (click)="search()" value="search"/><br>
           <br><br>
@@ -8,8 +8,8 @@ Enter Patient Name:<input type="text" [(ngModel)]="PatientName" name="" ID=""/><
             <td>Name</td>
             <td>Problem</td>
             </tr>
-            <tr *ngFor="let pats of PatientModels">
-            <td>{{pats.PatientName}}</td>
-          <td>{{pats.PatientProblem}}</td>
+            <tr *ngFor="let pats of patientModels">
+            <td>{{pats.patientName}}</td>
+          <td>{{pats.patientProblem}}</td>
           </tr>
           </table>

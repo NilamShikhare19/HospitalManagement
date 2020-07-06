@@ -2,8 +2,8 @@
 
 export class PatientModel{
     ID:number=0;
-    PatientName:string="";
-    PatientProblem:string="";
+    patientName:string="";
+    patientProblem:string="";
 
     //for validation
     formPatientGroup:FormGroup=null;

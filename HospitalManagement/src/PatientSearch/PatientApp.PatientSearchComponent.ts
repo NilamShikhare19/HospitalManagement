@@ -7,16 +7,16 @@ import {PatientModel} from '../PatientEdit/PatientApp.Model';
   templateUrl:'./PatientApp.PatientSearchComponent.html',
 })
 export class PatientSearchComponent{
-  PatientName:string="";
-  PatientModels:Array<PatientModel>=new Array<PatientModel>();
+  patientName:string="";
+  patientModels:Array<PatientModel>=new Array<PatientModel>();
   constructor(public http:HttpClient){}
    
   search(){
-     this.http.get("https://localhost:44347/api/PatientApi?PatientName="+this.PatientName)
+     this.http.get("https://localhost:44347/api/PatientApi?PatientName="+this.patientName)
      .subscribe(res=>this.Success(res),res=>this.Error(res));
   }
 Success(res){
-this.PatientModels=res;
+this.patientModels=res;
 }
 Error(res){
 

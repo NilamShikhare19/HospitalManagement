@@ -14,16 +14,16 @@ export class PatientComponent {
   patientObj:PatientModel=null;
   patientData:Array<PatientModel>=new Array<PatientModel>();
   Submit(){
-      let PatientDetails={
+      let patientDetails={
         ID:this.patientObj.ID,
-        PatientName:this.patientObj.PatientName,
-        PatientProblem:this.patientObj.PatientProblem
+        patientName:this.patientObj.patientName,
+        patientProblem:this.patientObj.patientProblem
       } 
       //let patDto:any={};
       //patDto.ID=this.patientObj.ID;
       //patDto.PatientName=this.patientObj.PatientName;
       //patDto.PatientProblem=this.patientObj.PatientProblem; 
-     this.httpobj.post("https://localhost:44347/api/PatientApi",PatientDetails)
+     this.httpobj.post("https://localhost:44347/api/PatientApi",patientDetails)
      .subscribe(res=>this.Success(res),
      res=>this.Error(res));
      //http post submit

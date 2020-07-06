@@ -3,14 +3,14 @@
       Patient ID:<input [ngModelOptions]="{standalone:true}"[(ngModel)]="patientObj.ID" value="" /><br>
       Patient Name:<input type="text"
                     formControlName="namecontrol"
-                    [(ngModel)]="patientObj.PatientName" 
+                    [(ngModel)]="patientObj.patientName" 
                     value=""/><br>
       <div [hidden]="!(patientObj.formPatientGroup.controls['namecontrol'].hasError('required'))">
       Name is required</div>
 
       Patient Problem:<input type="text"
                       formControlName="problemcontrol" 
-                      [(ngModel)]="patientObj.PatientProblem" 
+                      [(ngModel)]="patientObj.patientProblem" 
                       value=""/><br><br>
       <div [hidden]="!(patientObj.formPatientGroup.controls['problemcontrol'].hasError('required'))">Problem is required</div>
       <br>
@@ -26,8 +26,8 @@
   </tr>
   <tr *ngFor="let p of patientData">
   <td>{{p.ID}}</td>
-    <td>{{p.PatientName}}</td>
-    <td>{{p.PatientProblem}}</td>
+    <td>{{p.patientName}}</td>
+    <td>{{p.patientProblem}}</td>
     </tr>
     </table>
 
